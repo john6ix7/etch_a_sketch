@@ -9,22 +9,25 @@ h1 {
     font-size: 72px;
     text-align: center;
 }
-.content {
+.content-top{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
+    
 }
 
+.content-bottom {
+    margin-left: 650px;
+}
+
+
 #squares-container {
-    display: grid;
-    grid-template-columns: repeat(16,30px);
-    grid-template-rows: repeat(16,30px);
+    width: 500px;
+    height: 500px;
+    display: grid; 
+    border: 2px solid black;
 }
 
 #item {
-    border: skyblue 1px solid;
-}
-
-#item2 {
     border: skyblue 1px solid;
 }

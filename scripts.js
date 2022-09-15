@@ -25,11 +25,11 @@ function changeSize(input) {
     } else {
         alert("Too many squares")
     }
-}
+} 
 
 function changeBackground() {  
     if(color == 'random') {
-        this.style.backgroundColor = `hsl(${math.random() * 360}, 100%, 50%)`;
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
         this.style.backgroundColor = color;
     }
@@ -39,6 +39,11 @@ function changeColor(choice) {
     color = choice;
 }
 
+function resetBoard(){
+    const container = document.querySelector('#squares-container');
+    let board = container.querySelectorAll('div');
+    board.forEach(div=> div.style.backgroundColor = 'white');
+}
 
 
 /*document.querySelectorAll('#item').forEach(function(item) {
