@@ -1,3 +1,5 @@
+let color = "black";
+
 function populateBoard(size) {
     const container = document.querySelector('#squares-container');
     let board = container.querySelectorAll('div');
@@ -26,10 +28,16 @@ function changeSize(input) {
 }
 
 function changeBackground() {  
-    this.style.backgroundColor = "black";
+    if(color == 'random') {
+        this.style.backgroundColor = `hsl(${math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
 }
 
-
+function changeColor(choice) {
+    color = choice;
+}
 
 
 
