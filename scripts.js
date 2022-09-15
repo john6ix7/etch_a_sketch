@@ -1,19 +1,29 @@
 function populateBoard(size) {
     const container = document.querySelector('#squares-container');
-    container.style.gridTemplateColumns = 'repeat(16, 1fr)'
-    container.style.gridTemplateRows = 'repeat(16, 1fr)'
+    let board = container.querySelectorAll('div');
+    board.forEach(div=> div.remove());
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`
 
-    for (let i = 0; i < 256; i ++) {
+    let amount = size * size;;
+    for (let i = 0; i < amount; i ++) {
         const squares = document.createElement('div');
         squares.style.backgroundColor = "white";
-        squares.style.border = '1px solid black'
         squares.addEventListener('mouseover', changeBackground)
         container.appendChild(squares)
     }
 
 }
 
-populateBoard(16)
+populateBoard(16);
+
+function changeSize(input) {
+    if(input >= 2 && input <= 100){
+        populateBoard(input);
+    } else {
+        alert("Too many squares")
+    }
+}
 
 function changeBackground() {  
     this.style.backgroundColor = "black";
