@@ -19,13 +19,22 @@ function populateBoard(size) {
 
 populateBoard(16);
 
+function changeSize() {
+   let choice = prompt("Enter a number between 2-100")
+   if(choice >= 2 && choice <= 100){
+        populateBoard(choice);
+    } else {
+        alert("Too many squares")
+    }
+}
+/*
 function changeSize(input) {
     if(input >= 2 && input <= 100){
         populateBoard(input);
     } else {
         alert("Too many squares")
     }
-} 
+} */
 
 function changeBackground() {  
     if(color == 'random') {
