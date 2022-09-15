@@ -9,11 +9,21 @@
 </head>
 <body>
     <h1>Etch-a-Sketch </h1>
-    <div class="content">
-        <div id="squares-container">
-            <!-- <div id="item" onmouseover ="changeBackground()" onmouseout="backToNormal()"> -->      
-            </div>   
+    <div class="content-top">
+        <div id="squares-container"> 
         </div>
+    </div>
+    <div class="content-bottom">
+    <div class="buttons">
+        <button onclick="changeColor('black')">Black</button>      
+        <button onclick="changeColor('white')">Eraser</button>  
+        <button onclick="changeColor('grey')">Grey</button> 
+        <button onclick="changeColor('random')">Random</button>
+    </div>
+    <div>
+        <input type="text" placeholder="size of board" value="16" onchange="changeSize(this.value)"/>
+        <button>Set Size</button>
+    </div>
     </div>
 </body>
 <script src="scripts.js"></script>
